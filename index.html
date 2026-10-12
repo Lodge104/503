@@ -418,7 +418,7 @@
 
      ErrorPage.prototype.fetchStatus = function (pageUrl, pageType) {
        //console.log('in app.js fetch');
-       if (!pageUrl || !pageType || pageType == '404') return;
+       if (!pageUrl || !pageType || pageType == '503') return;
 
        var url = ''
          , self = this;
@@ -442,7 +442,7 @@
        });
 
      };
-     var ep = new ErrorPage('body', "404", "background");
+     var ep = new ErrorPage('body', "503", "background");
      ep.initialize();
 
      // hack to make sure content stays centered >_<
